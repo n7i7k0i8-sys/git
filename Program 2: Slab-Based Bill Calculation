@@ -1,0 +1,10 @@
+units = int(input("Enter units consumed: "))
+
+if units <= 100:
+    bill = units * 2
+elif units <= 300:
+    bill = 200 + (units - 100) * 4
+else:
+    bill = 1000 + (units - 300) * 6
+
+print("Bill Amount =", bill)
