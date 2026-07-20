@@ -1,0 +1,19 @@
+class ElectricityBill:
+
+    def __init__(self, name, units):
+        self.name = name
+        self.units = units
+
+    def calculate(self):
+        return self.units * 5
+
+    def display(self):
+        print("\nCustomer:", self.name)
+        print("Units:", self.units)
+        print("Bill:", self.calculate())
+
+name = input("Enter Name: ")
+units = int(input("Enter Units: "))
+
+obj = ElectricityBill(name, units)
+obj.display()
