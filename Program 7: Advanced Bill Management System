@@ -1,0 +1,48 @@
+class ElectricityBill:
+
+    def __init__(self, customer_id, name, units):
+        self.customer_id = customer_id
+        self.name = name
+        self.units = units
+
+    def calculate_bill(self):
+        if self.units <= 100:
+            return self.units * 2
+        elif self.units <= 300:
+            return 200 + (self.units - 100) * 4
+        else:
+            return 1000 + (self.units - 300) * 6
+
+    def display_bill(self):
+        print("\n========== ELECTRICITY BILL ==========")
+        print("Customer ID :", self.customer_id)
+        print("Customer Name :", self.name)
+        print("Units Consumed :", self.units)
+        print("Total Bill : ₹", self.calculate_bill())
+        print("======================================")
+
+records = []
+
+while True:
+    print("\n1. Add Customer")
+    print("2. View Bills")
+    print("3. Exit")
+
+    choice = input("Enter Choice: ")
+
+    if choice == "1":
+        cid = input("Customer ID: ")
+        name = input("Customer Name: ")
+        units = int(input("Units Consumed: "))
+
+        records.append(ElectricityBill(cid, name, units))
+
+    elif choice == "2":
+        for customer in records:
+            customer.display_bill()
+
+    elif choice == "3":
+        break
+
+    else:
+        print("Invalid Choice")
