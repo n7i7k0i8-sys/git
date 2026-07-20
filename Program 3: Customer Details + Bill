@@ -1,0 +1,9 @@
+name = input("Customer Name: ")
+units = int(input("Units Consumed: "))
+
+bill = units * 5
+
+print("\n--- BILL ---")
+print("Customer:", name)
+print("Units:", units)
+print("Amount:", bill)
