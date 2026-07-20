@@ -1,0 +1,10 @@
+def calculate_bill(units):
+    if units <= 100:
+        return units * 2
+    elif units <= 300:
+        return 200 + (units - 100) * 4
+    else:
+        return 1000 + (units - 300) * 6
+
+units = int(input("Enter units: "))
+print("Bill =", calculate_bill(units))
