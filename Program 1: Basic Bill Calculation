@@ -1,0 +1,5 @@
+units = int(input("Enter units consumed: "))
+
+bill = units * 5
+
+print("Electricity Bill =", bill)
