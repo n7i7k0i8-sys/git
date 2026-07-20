@@ -1,0 +1,9 @@
+customers = int(input("Number of customers: "))
+
+for i in range(customers):
+    name = input("\nCustomer Name: ")
+    units = int(input("Units: "))
+
+    bill = units * 5
+
+    print(f"{name}'s Bill = ₹{bill}")
